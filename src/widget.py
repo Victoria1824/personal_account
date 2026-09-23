@@ -9,6 +9,7 @@ import masks
 
 def mask_account_card(mask_card: str) -> str:
     """Зашифровка карты или счета"""
+    letters = ""
     numbers = ""
     for i in mask_card:
         if i.isdigit():
@@ -31,4 +32,6 @@ def get_date(date: str) -> str:
     return f"{date[8:10]}.{date[5:7]}.{date[0:4]}"
 
 
-date = get_date()
+date = get_date('2024-03-11T02:26:18.671407')
+
+
