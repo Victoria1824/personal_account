@@ -24,11 +24,6 @@ def get_mask_card_number(card_number:[str]) -> str:
     return new_format_to_return
 
 
-input_from_user = input("Введите свой номер карты:")
-returned_value = get_mask_card_number(input_from_user)
-print(returned_value)
-
-
 def get_mask_account(account_number: str) -> str:
     """  Функция для маскировки номера банковского счета """
     new_account_number = account_number.replace(" ", "")
@@ -40,10 +35,14 @@ def get_mask_account(account_number: str) -> str:
 
     return f"**{account_number[-4:]}"
 
-input_from_user_account = input("Введите свой номер счета:")
-returned_value = get_mask_account(input_from_user_account)
-print(returned_value)
 
+if __name__ == '__main__':
+    input_from_user = input("Введите свой номер карты:")
+    returned_value = get_mask_card_number(input_from_user)
+    print(returned_value)
 
+    input_from_user_account = input("Введите свой номер счета:")
+    returned_value = get_mask_account(input_from_user_account)
+    print(returned_value)
 
 
