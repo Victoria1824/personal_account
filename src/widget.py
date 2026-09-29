@@ -4,7 +4,8 @@
  Реализуйте новый функционал, делая небольшие коммиты.
 """
 
-import masks
+from masks import get_mask_card_number
+from masks import get_mask_account
 
 
 def mask_account_card(mask_card: str) -> str:
@@ -14,13 +15,15 @@ def mask_account_card(mask_card: str) -> str:
     for i in mask_card:
         if i.isdigit():
             numbers += i
+        else:
+            letters += i
     numbers_len = len(numbers)
     if numbers_len == 16:
-        card_number = masks.get_mask_card_number(mask_card)
-        return card_number
+        card_number = get_mask_card_number(numbers)
+        return letters + card_number
     elif numbers_len == 20:
-        get_mask = masks.get_mask_account(mask_card)
-        return get_mask
+        get_mask = get_mask_account(numbers)
+        return letters + get_mask
 
 
 input_from_user = input("Введите свой номер карты или счета:")

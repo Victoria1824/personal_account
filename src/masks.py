@@ -45,7 +45,5 @@ returned_value = get_mask_account(input_from_user_account)
 print(returned_value)
 
 
-if __name__ == '__main__':
-
 
 
