@@ -10,7 +10,37 @@ def get_mask_card_number
 def get_mask_account
 
 Продолжаем работу над виджетом банковских операций клиента. Выкладываем свой проект на GitHub и ведем разработку по GitFlow.
+
 Создаём:
 1. Функцию возвращаемую новый список словарей, содержащий только те словари,
     у которых ключ state соответствует указанному значению def filter_by_state
 2. Функцию для сортировки списков по дате def sort_by_date
+
+## Установка и настройка
+
+### 1. Требования
+* **Python 3.10+** (рекомендуется 3.11 или 3.12)
+* **Git**
+
+### 2. Клонирование репозитория
+```bash
+git clone https://github.com
+cd project-name
+```
+
+### 3. Создание виртуального окружения и установка пакетов
+
+Убедитесь, что у вас установлен [Poetry](https://python-poetry.org).
+
+```bash
+git clone https://github.com
+cd project-name
+poetry install
+cp .env.example .env
+poetry run python main.py
+```
+
+### 4. Запуск проекта
+```bash
+python main.py
+```
